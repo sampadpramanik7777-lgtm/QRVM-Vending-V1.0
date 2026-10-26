@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f7f2">
+  <meta name="description" content="QRVM Vending — a simple product purchase demo.">
+  <title>QRVM Vending | GIFT</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="QRVM Vending home">
+      <span class="brand-mark" aria-hidden="true">Q</span>
+      <span>QRVM <span class="brand-light">- by Sampad</span></span>
+    </a>
+    <span class="demo-pill"><span class="status-dot"></span> DEMO STORE</span>
+  </header>
+
+  <main class="main-content">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">SIMPLE · SMART · SEAMLESS</p>
+      <h1 id="page-title">A little something<br><span>just for you.</span></h1>
+      <p class="intro-copy">Choose your item and enjoy a simple, seamless vending experience.</p>
+    </section>
+
+    <section class="product-card" aria-labelledby="product-name">
+      <div class="product-visual">
+        <span class="visual-label">FEATURED ITEM</span>
+        <div class="gift-art" role="img" aria-label="Minimal illustration of a green gift box with a ribbon">
+          <div class="gift-shadow"></div>
+          <div class="gift-box">
+            <div class="gift-lid"></div>
+            <div class="gift-ribbon-vertical"></div>
+            <div class="gift-ribbon-horizontal"></div>
+            <div class="gift-bow bow-left"></div>
+            <div class="gift-bow bow-right"></div>
+            <div class="gift-knot"></div>
+          </div>
+          <span class="sparkle sparkle-one">✦</span>
+          <span class="sparkle sparkle-two">✧</span>
+          <span class="sparkle sparkle-three">·</span>
+        </div>
+        <span class="visual-caption">A small gift. A good feeling.</span>
+      </div>
+
+      <div class="product-details">
+        <div class="product-heading">
+          <div>
+            <p class="product-category">QRVM COLLECTION</p>
+            <h2 id="product-name">GIFT</h2>
+          </div>
+          <p class="price">Free<span> ONE GIFT</span></p>
+        </div>
+        <p class="product-description">A little surprise, wrapped with care. Ready when you are.</p>
+        <div class="availability"><span class="availability-dot"></span> Available in demo</div>
+        <button class="buy-button" id="buy-button" type="button">
+          <span class="button-label">Buy Now</span>
+          <span class="button-arrow" aria-hidden="true">↗</span>
+        </button>
+        <p class="demo-note"><span aria-hidden="true">ⓘ</span> Demo only — no payment will be taken.</p>
+      </div>
+    </section>
+
+    <section class="trust-row" aria-label="Demo information">
+      <div><span class="trust-icon">⌁</span><span>Simple experience</span></div>
+      <div><span class="trust-icon">✓</span><span>Instant demo status</span></div>
+      <div><span class="trust-icon">◎</span><span>QRVM Vending</span></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> QRVM Vending</span>
+    <span>Built with care by Sampad</span>
+  </footer>
+
+  <div class="modal-backdrop" id="status-modal" hidden>
+    <section class="status-dialog" role="dialog" aria-modal="true" aria-labelledby="status-title" aria-describedby="status-description">
+      <button class="close-button" id="close-modal" type="button" aria-label="Close status window">×</button>
+      <div class="loader-wrap" id="loading-view">
+        <div class="loader" aria-hidden="true"></div>
+        <p class="dialog-eyebrow">PLEASE WAIT</p>
+        <h2 id="status-title">Processing your request</h2>
+        <p id="status-description">This demo is preparing your purchase status…</p>
+      </div>
+      <div class="success-view" id="success-view" hidden>
+        <div class="success-icon" aria-hidden="true">
+          <svg viewBox="0 0 52 52" role="img" aria-label="Check mark">
+            <circle cx="26" cy="26" r="24"></circle>
+            <path d="M15 27l7 7 15-16"></path>
+          </svg>
+        </div>
+        <p class="dialog-eyebrow">ALL DONE</p>
+        <h2 id="success-title">Purchase successful!</h2>
+        <p id="success-description">Your purchase for GIFT is complete.</p>
+        <div class="receipt-row"><span>Item</span><strong>GIFT</strong></div>
+        <div class="receipt-row"><span>Total</span><strong>Free</strong></div>
+        <p class="success-disclaimer">No money was charged, A litte gift by Sampad.</p>
+        <button class="done-button" id="done-button" type="button">Done</button>
+      </div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
